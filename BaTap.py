@@ -78,6 +78,27 @@ def cau7():
        except ZeroDivisionError:
            print("Can’t divided by zero")
 
+
+def cau8():
+    refust =[]
+    ages=[23,10,80]
+    names = ["Hoa", "Lam", "Nam"]
+
+    for key in range(0, len(ages)):
+        refust.append(tuple([ages[key], names[key]]))
+
+    refust.sort(key=lambda tup: tup[0])
+    print(refust)
+
+
+def cau9(path):
+    lines = None
+    with open(path) as f:
+        lines = f.readlines()
+    for line in lines:
+        print((line))
+
+
 if __name__ == "__main__":
     mydict = {
         "a": 1,
@@ -105,3 +126,6 @@ if __name__ == "__main__":
     cau6b()
     print(" Ket qua:")
     cau7()
+    print("Sap xep theo ham labda:")
+    cau8()
+    cau9("ten.txt")
